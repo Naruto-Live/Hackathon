@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Home Dashboard</title>
+    <link rel="stylesheet" href="/Home.css"/>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1 style="text-align: center;">Muncipality</h1>
+
+        <div class="home-card-container">
+
+            <!-- 1️⃣ View Issue Card -->
+            <div class="home-card">
+                <h3>View Issues</h3>
+                <p><strong>Total Issues:</strong> 5</p>
+                <a href="https://mapster-62700.web.app/issues" target="_blank">
+                    <button class="btn">View Issues</button>
+                </a>
+            </div>
+
+
+            <!-- 2️⃣ Agent Card -->
+            <div class="home-card">
+                <h3>Agents</h3>
+                <p><strong>Total Agents:</strong> <%= Agents.length %></p>
+                <a href="/agent"><button class="btn">View Agents</button></a>
+            </div>
+
+            <!-- 3️⃣ Worker Card -->
+            <div class="home-card">
+                <h3>Workers</h3>
+                <p><strong>Total Workers:</strong> <%= Workers.length %></p>
+                <a href="/worker"><button class="btn">View Workers</button></a>
+            </div>
+
+            <!-- 4️⃣ Municipality Authorities Card -->
+            <div class="home-card">
+                <h3>Municipality Authorities</h3>
+                <p><strong>Total Municipalities:</strong> <%= Muncis.length %></p>
+                <p><strong>Municipality:</strong> <%= Muncis[0] ? Muncis[0].from : 'N/A' %></p>
+                <a href="/munci"><button class="btn">View Authorities</button></a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

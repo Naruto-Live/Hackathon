@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Worker Dashboard</title>
+    <link rel="stylesheet" href="/Worker.css"/>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1 style="text-align: center;">Workers Dashboard</h1>
+
+        <div class="card-container">
+            <% for (let worker of Workers) { %>
+                <div class="card">
+                    <img src="/img.png" alt="Worker Pic" class="card-img"/>
+                    <h2 class="card-title"><%= worker.WorkerId %></h2>
+                    <p class="card-text">Status: <%= worker.Status %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+</body>
+
+</html>

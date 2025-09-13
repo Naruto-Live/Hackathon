@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Card</title>
+</head>
+<body>
+    <!-- User form -->
+     <!-- abhi isme location ke saath time bhi jayega -->
+    <h3>Submit you Request</h3>
+    <form method="POST" action="/post" enctype="multipart/form-data">
+        <label for="form_name">Name:</label>
+        <input type="text" id="form_name" name="form_name" placeholder="Enter your name"/>
+        <input type="file" name="form_files" multiple required />
+        <textarea name="form_desc" placeholder="Enter your description..."></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+<!-- want to add count down that run upto 7 day , restrict user to post any thing until 7 days of until the mission complete -->
+    
+</body>
+</html>

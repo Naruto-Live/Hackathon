@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Municipality Authorities</title>
+    <link rel="stylesheet" href="/Munci.css"/>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <div class="choco">
+        <h1 style="text-align: center;">Municipality Authorities</h1>
+
+        <div class="card-container">
+            <% for (let munci of Muncis) { %>
+                <div class="card">
+                    <img src="/img.png" alt="Authority Pic" class="card-img"/>
+                    <h2 class="card-title"><%= munci.from %></h2>
+                    <p class="card-text">Location: <%= munci.locat %></p>
+                </div>
+            <% } %>
+        </div>
+        </div>
+
+        <a href="/home" class="back-btn"><button>Back</button></a>
+    </div>
+
+</body>
+
+</html>

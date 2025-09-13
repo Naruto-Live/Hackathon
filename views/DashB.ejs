@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard Cards</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+            <div class="h1">
+        <h1>Dashboard</h1>
+    </div>
+
+    <div class="dashboard-container">
+        <% for (let Dsh of Dash) { %>
+            <div class="card">
+                
+                <!-- Image Section (show first image if exists) -->
+                <% if (Dsh.img && Dsh.img.length > 0) { %>
+                    <img src="/<%= Dsh.img[0] %>" alt="Mission Image" class="card-image"/>
+                <% } else { %>
+                    <p>No image available</p>
+                <% } %>
+
+                <!-- Description and Date -->
+                <div class="card-body">
+                    <p><strong>Description:</strong> <%= Dsh.desc %></p>
+                    <p><strong>Date:</strong> <%= new Date(Dsh.created_at).toDateString() %></p>
+                </div>
+
+                <!-- Details Button -->
+                <div class="card-footer">
+                    <button class="btn">View Details</button>
+                </div>
+
+            </div>
+        <% } %>
+    </div>
+
+                <a href="/home" class="back-btn"><button>Back</button></a>
+    </div>
+
+</body>
+
+</html>

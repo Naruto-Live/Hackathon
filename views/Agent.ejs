@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Agent Section</title>
+    <link rel="stylesheet" href="/Agent.css"/>
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <h1>Agents List</h1>
+
+        <div class="card-container">
+            <% for (let agent of Agents) { %>
+                <div class="card">
+                    <img src="/img.png" alt="Profile Pic" class="card-img"/>
+                    <h2 class="card-title"><%= agent.AgentId %></h2>
+                    <p class="card-text">Status: <%= agent.Status %></p>
+                    <a href="/agent"><button class="card-btn">View Details</button></a>
+                </div>
+            <% } %>
+        </div>
+
+
+        <a href="/home" class="back-btn"><button>Back</button></a>
+    </div>
+
+</body>
+
+</html>
